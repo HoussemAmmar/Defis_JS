@@ -1,0 +1,66 @@
+
+Create a function that returns true if a string contains any spaces. 
+
+** Examples  
+
+hasSpaces("hello") ➞ false
+
+hasSpaces("hello, world") ➞ true
+
+hasSpaces(" ") ➞ true
+
+hasSpaces("") ➞ false
+
+hasSpaces(",./!@#") ➞ false
+
+Solution :
+
+function contain_spaces(str){
+
+  console.log(/\s/.test(str))
+    // It has any kind of whitespace
+  }
+contain_spaces("boo bo");
+
+--------------------------------------------------------------------
+
+Create a function that takes a string and returns the number (count) of vowels contained within it.
+
+** Examples  
+
+countVowels("Celebration") ➞ 5
+countVowels("Palm") ➞ 1
+countVowels("Prediction") ➞ 4
+
+Solution :
+
+function getVowels(str) {
+  var m = str.match(/[aeiou]/gi);
+  return m === null ? 0 : m.length;
+}
+console.log (getVowels("saif"));
+
+---------------------------------------------------------------------- 
+
+Create a function that takes a string and character as arguments and  replaces all the vowels in a string with character.
+
+** Examples
+
+replaceVowels("the aardvark", "#") ➞ "th# ##rdv#rk"
+replaceVowels("minnie mouse", "?") ➞ "m?nn?? m??s?"
+
+Solution
+
+function replace(string){
+let characterArray = string.split("")
+       return characterArray.map(character => {
+           if(/[aeiouyAEIOUY]/.test(character)){
+              character = ""
+           } else {return character}
+       }).join("#")
+      }
+  
+console.log(replace("houssem"));
+
+
+
